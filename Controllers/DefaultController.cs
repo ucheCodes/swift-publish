@@ -6,7 +6,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
+using DBreeze;
+using DBreeze.DataTypes;
+using Newtonsoft.Json;
 using Gitless_api.Models;
+using Gitless_api.Database;
 
 namespace Gitless_api.Controllers
 {
@@ -16,31 +20,65 @@ namespace Gitless_api.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly IWebHostEnvironment _env;
-        private List<Users> _users;
         public DefaultController(IConfiguration configuration, IWebHostEnvironment env)
         {
             _configuration = configuration;
             _env = env;
-            _users = new List<Users>();
         }
         [HttpGet]
         public JsonResult Get()
         {
-            _users = new List<Users>(){
-                new Users(){Lastname = "Matt", Firstname = "Wilipp", UserId = Guid.NewGuid().ToString(), Date = DateTime.UtcNow.ToString()},
-                new Users(){Lastname = "Mattew", Firstname = "Ada Philip", UserId = Guid.NewGuid().ToString(), Date = DateTime.UtcNow.ToString()},
-                new Users(){Lastname = "Donna", Firstname = "Ada", UserId = Guid.NewGuid().ToString(), Date = DateTime.UtcNow.ToString()},
-            };
-            return new JsonResult(_users);
+            // var users = database.ReadAll("Users");
+            // return new JsonResult(users);
+            return new JsonResult("hello world, this is default controller");
+        }
+        [Route("update")]
+        [HttpPost]
+        public JsonResult Update(Users users)
+        {
+            var isUpdated = database.Create("Users",users.UserId,users);
+            if (isUpdated)
+            {
+                return new JsonResult("success");
+            }
+            else{
+                return new JsonResult("failed");
+            }
         }
         [HttpPost]
-        public JsonResult Update(Users u)
+        public JsonResult Post(Users users)
         {
-            _users.Add(u);
-            return new JsonResult(_users);
+            users.UserId = Guid.NewGuid().ToString();
+            var isCreated = database.Create("Users",users.UserId,users);
+            if (isCreated)
+            {
+                return new JsonResult(users.UserId);
+            }
+            else
+            {
+                return new JsonResult("failed");
+            }
         }
-
-                [Route("SaveFile")]
+        [HttpGet("{userId}")]
+        public JsonResult Read(string userId)
+        {
+            var user = database.Read("Users",userId);
+            return new JsonResult(user);
+        }
+         [HttpDelete("{id}")]
+        public JsonResult Delete(string id)
+        {
+            var isDeleted = database.Delete("Users",id);
+           if (isDeleted)
+           {
+                return new JsonResult("success");
+           }
+           else
+           {
+                return new JsonResult("failed");
+           }
+        }
+        [Route("SaveFile")]
         [HttpPost]
         public JsonResult SaveFile()
         {
@@ -74,15 +112,15 @@ namespace Gitless_api.Controllers
                     }
                     return new JsonResult(fileList);
                 }
-                else// git pull command
-                { //git pull 'https://github.com/ucheCodes/swift-publish.git' main
+                else
+                {
                     return new JsonResult("img.jpg");
                 }
             }
             catch (System.Exception)
             {
                 
-               return new JsonResult ("img.jpg");//git push -u origin main
+               return new JsonResult ("img.jpg");
             }
         }
     }

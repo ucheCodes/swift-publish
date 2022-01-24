@@ -32,3 +32,5 @@ C:\Users\Uche Victor\Code Hub\DotNet\Azure\Gitless-api\bin\Debug\net5.0\publish\
 C:\Users\Uche Victor\Code Hub\DotNet\Azure\Gitless-api\bin\Debug\net5.0\publish\appsettings.json
 C:\Users\Uche Victor\Code Hub\DotNet\Azure\Gitless-api\bin\Debug\net5.0\publish\Gitless-api.deps.json
 C:\Users\Uche Victor\Code Hub\DotNet\Azure\Gitless-api\bin\Debug\net5.0\publish\Gitless-api.runtimeconfig.json
+C:\Users\Uche Victor\Code Hub\DotNet\Azure\Gitless-api\bin\Debug\net5.0\DBreeze.dll
+C:\Users\Uche Victor\Code Hub\DotNet\Azure\Gitless-api\bin\Debug\net5.0\Newtonsoft.Json.dll
