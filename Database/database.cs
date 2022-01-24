@@ -121,7 +121,16 @@ namespace Gitless_api.Database
                 }
             }
             return false;
-        }
+        }/*
+                // dotnet server publish code
+        // dotnet publish -c Release -o ./publish
+        //git push coomands
+        // git commit -m "initial update"
+        //git remote add origin https://github.com/ucheCodes/Shop-Swift.git
+        //
+        // git push -u origin main
+        
+        */
         
         public static bool DeleteAll(string tablename, bool recreateFile)
         {
