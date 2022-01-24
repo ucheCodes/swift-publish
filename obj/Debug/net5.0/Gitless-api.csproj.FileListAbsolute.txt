@@ -27,3 +27,8 @@ C:\Users\Uche Victor\Code Hub\DotNet\Azure\Gitless-api\obj\Debug\net5.0\Gitless-
 C:\Users\Uche Victor\Code Hub\DotNet\Azure\Gitless-api\obj\Debug\net5.0\ref\Gitless-api.dll
 C:\Users\Uche Victor\Code Hub\DotNet\Azure\Gitless-api\obj\Debug\net5.0\Gitless-api.pdb
 C:\Users\Uche Victor\Code Hub\DotNet\Azure\Gitless-api\obj\Debug\net5.0\Gitless-api.genruntimeconfig.cache
+C:\Users\Uche Victor\Code Hub\DotNet\Azure\Gitless-api\bin\Debug\net5.0\publish\web.config
+C:\Users\Uche Victor\Code Hub\DotNet\Azure\Gitless-api\bin\Debug\net5.0\publish\appsettings.Development.json
+C:\Users\Uche Victor\Code Hub\DotNet\Azure\Gitless-api\bin\Debug\net5.0\publish\appsettings.json
+C:\Users\Uche Victor\Code Hub\DotNet\Azure\Gitless-api\bin\Debug\net5.0\publish\Gitless-api.deps.json
+C:\Users\Uche Victor\Code Hub\DotNet\Azure\Gitless-api\bin\Debug\net5.0\publish\Gitless-api.runtimeconfig.json
