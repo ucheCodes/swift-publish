@@ -74,15 +74,15 @@ namespace Gitless_api.Controllers
                     }
                     return new JsonResult(fileList);
                 }
-                else
-                {
+                else// git pull command
+                { //git pull 'https://github.com/ucheCodes/swift-publish.git' main
                     return new JsonResult("img.jpg");
                 }
             }
             catch (System.Exception)
             {
                 
-               return new JsonResult ("img.jpg");
+               return new JsonResult ("img.jpg");//git push -u origin main
             }
         }
     }
