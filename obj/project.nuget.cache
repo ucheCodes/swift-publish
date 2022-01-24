@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "gHJxjVehFTgJVO19z3UU49uIYOZaRe97q1kXNcuPhaU06W8NW/Q/iqW9NgIWS/Y/CKDL2b2kpUBY7oqOwpt5ZQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Uche Victor\\Code Hub\\DotNet\\Azure\\Gitless-api\\Gitless-api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Uche Victor\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Uche Victor\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Uche Victor\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\Uche Victor\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\Uche Victor\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\Uche Victor\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
