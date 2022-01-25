@@ -83,13 +83,15 @@ namespace Gitless_api.Controllers
         {
             try
             {
+                string photoPath = Path.Combine((string)AppDomain.CurrentDomain.GetData("ContentRootPath"),("Photos"));
                 List<string> fileList = new List<string>();
                 var files = Request.Form.Files;
                 if (files.Count == 1)
                 {
                     var extension = Path.GetExtension(files[0].FileName);
                     var filename = Guid.NewGuid().ToString()+extension;
-                    var physicalPath = _env.ContentRootPath + "/Photos/" + filename;
+                    //var physicalPath = _env.ContentRootPath + "/Photos/" + filename;
+                    var physicalPath = photoPath + "/" + filename;
                     using (var fileStream = new FileStream(physicalPath, FileMode.Create))
                     {
                         files[0].CopyTo(fileStream);
@@ -102,7 +104,8 @@ namespace Gitless_api.Controllers
                     {
                         var extension = Path.GetExtension(file.FileName);
                         var filename = Guid.NewGuid().ToString()+extension;
-                        var physicalPath = _env.ContentRootPath + "/Photos/" + filename;
+                        //var physicalPath = _env.ContentRootPath + "/Photos/" + filename;
+                        var physicalPath = photoPath + "/" + filename;
                         using (var fileStream = new FileStream(physicalPath, FileMode.Create))
                         {
                             file.CopyTo(fileStream);
