@@ -15,7 +15,7 @@ using Gitless_api.Models;
 using Gitless_api.Database;
 using Gitless_api.Hubs;
 
-namespace Adorable.Controllers
+namespace Gitless_api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -28,9 +28,8 @@ namespace Gitless_api.Controllers
         [HttpGet]
         public JsonResult Get()
         {
-            // var users = database.ReadAll("Users");
-            // return new JsonResult(users);
-            return new JsonResult("hello world, this is default controller");
+            var users = database.ReadAll("Users");
+            return new JsonResult(users);
         }
         [Route("update")]
         [HttpPost]

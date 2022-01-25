@@ -35,9 +35,8 @@ namespace Gitless_api.Controllers
         [HttpGet]
         public JsonResult Get()
         {
-            // var connectedUsers = database.ReadAll("SignalrConnections");
-            // return new JsonResult(connectedUsers);
-            return new JsonResult("hello world, this is connection controller");
+            var connectedUsers = database.ReadAll("SignalrConnections");
+            return new JsonResult(connectedUsers);
         }
         [HttpPost]
         public JsonResult Post(Connections connection)

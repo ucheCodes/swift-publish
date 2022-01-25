@@ -12,7 +12,7 @@ using Newtonsoft.Json;
 using Gitless_api.Models;
 using Gitless_api.Database;
 
-namespace Adorable.Controllers
+namespace Gitless_api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -11,7 +11,7 @@ using Gitless_api.Hubs;
 using Newtonsoft.Json;
 
 
-namespace Adorable.Controllers
+namespace Gitless_api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
