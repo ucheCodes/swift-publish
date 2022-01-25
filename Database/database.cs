@@ -12,8 +12,7 @@ namespace Gitless_api.Database
 {
     public static class database
     {
-        static string path = "build and delete, this is for test purposes alone";
-        //static string path = Path.Combine((string)AppDomain.CurrentDomain.GetData("ContentRootPath"),("Database\\data"));
+        static string path = Path.Combine((string)AppDomain.CurrentDomain.GetData("ContentRootPath"),("Database\\data"));
         private static DBreezeEngine engine = new DBreezeEngine(path);
         
         public static bool Create(string tablename, string _key, object _value)

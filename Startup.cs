@@ -78,8 +78,8 @@ namespace Gitless_api
             //             RequestPath = "/Photos"
             // });
 
-	        // AppDomain.CurrentDomain.SetData("ContentRootPath", env.ContentRootPath);
-            // AppDomain.CurrentDomain.SetData("WebRootPath", env.WebRootPath);
+	        AppDomain.CurrentDomain.SetData("ContentRootPath", env.ContentRootPath);
+            AppDomain.CurrentDomain.SetData("WebRootPath", env.WebRootPath);
         }
     }
 }
