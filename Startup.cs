@@ -71,12 +71,12 @@ namespace Gitless_api
             });
 
             
-            // app.UseStaticFiles(new StaticFileOptions
-            //  {
-            //      FileProvider = new PhysicalFileProvider(
-            //          Path.Combine(Directory.GetCurrentDirectory(),"Photos")),
-            //             RequestPath = "/Photos"
-            // });
+            app.UseStaticFiles(new StaticFileOptions
+             {
+                 FileProvider = new PhysicalFileProvider(
+                     Path.Combine(Directory.GetCurrentDirectory(),"Photos")),
+                        RequestPath = "/Photos"
+            });
 
 	        AppDomain.CurrentDomain.SetData("ContentRootPath", env.ContentRootPath);
             AppDomain.CurrentDomain.SetData("WebRootPath", env.WebRootPath);
